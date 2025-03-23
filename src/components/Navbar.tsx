@@ -24,19 +24,19 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-8",
-        scrolled ? "neo-morphism" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 px-6 md:px-8",
+        scrolled ? "bg-background/90 backdrop-blur-sm border-b border-white/5" : "bg-transparent"
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
         <div 
-          className="text-xl font-semibold cursor-pointer transition-colors hover:text-primary"
+          className="text-2xl font-bold cursor-pointer transition-colors hover:text-primary"
           onClick={() => scrollTo('hero')}
         >
           Ishank Gera
         </div>
         
-        <nav className="hidden md:flex space-x-8 text-sm font-medium">
+        <nav className="hidden md:flex space-x-10 text-base font-medium">
           {['about', 'education', 'experience', 'skills', 'projects', 'achievements', 'contact'].map((item) => (
             <button
               key={item}
